@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Thực đơn Hoshi - quán cà phê ấm cúng với cà phê sữa đá, bạc xỉu, trà trái cây và bánh truyền thống.">
+  <title>Hoshi — Thực Đơn</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-top">
+      <img src="../images/logo.png" alt="Logo Hoshi" class="logo">
+
+      <div class="brand-text">
+        <h1>Hoshi</h1>
+        <p class="slogan">Giữ lấy hương vị Sài Gòn xưa, từng vợt một</p>
+      </div>
+
+      <button class="cart-btn" type="button" aria-label="Xem giỏ hàng">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="9" cy="21" r="1"></circle>
+          <circle cx="19" cy="21" r="1"></circle>
+          <path d="M1 1h4l2.6 13.4a2 2 0 0 0 2 1.6h9.8a2 2 0 0 0 2-1.6L23 6H6"></path>
+        </svg>
+        <span class="cart-count">0</span>
+      </button>
+    </div>
+
+    <!-- NAVIGATION -->
+    <nav class="main-nav" aria-label="Điều hướng chính">
+      <ul>
+        <li><a href="#trang-chu">Trang chủ</a></li>
+        <li><a href="#thuc-don">Thực đơn</a></li>
+        <li><a href="#khuyen-mai">Khuyến mãi</a></li>
+        <li><a href="#lien-he">Liên hệ</a></li>
+      </ul>
+    </nav>
+
+    <div class="banner" id="trang-chu">
+      <div class="banner-text">
+        <p class="eyebrow">Quán nhỏ góc hẻm — pha từ 1978</p>
+        <p class="banner-quote">Một vợt cà phê, một chiếc ghế đẩu, một buổi sáng chậm rãi.</p>
+      </div>
+    </div>
+  </header>
+
+  <div class="page-body" id="thuc-don">
+    <!-- NỘI DUNG CHÍNH -->
+    <main class="menu-main">
+
+      <section class="menu-section" id="ca-phe">
+        <h2>Cà Phê Truyền Thống</h2>
+        <p class="section-note">Rang mộc, pha bằng vợt vải theo cách của bà từ hơn bốn mươi năm trước.</p>
+        <div class="dish-grid">
+
+          <article class="dish-card">
+            <img src="../images/ca_phe_sua_da.jpg" alt="Cà Phê Sữa Đá">
+            <div class="dish-body">
+              <h3>Cà Phê Sữa Đá</h3>
+              <p>Cà phê robusta rang mộc, sữa đặc đánh tan, đá đập nhỏ — vị đắng dịu, hậu ngọt kéo dài.</p>
+              <div class="dish-foot">
+                <span class="price">29.000đ</span>
+                <button class="btn-order" type="button">Đặt món</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="dish-card">
+            <img src="../images/cafe_den_da.avif" alt="Cà Phê Đen Đá">
+            <div class="dish-body">
+              <h3>Cà Phê Đen Đá</h3>
+              <p>Đậm và mộc mạc, không đường không sữa — dành cho người thích vị nguyên bản.</p>
+              <div class="dish-foot">
+                <span class="price">25.000đ</span>
+                <button class="btn-order" type="button">Đặt món</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="dish-card">
+            <img src="../images/bac_siu.jpg" alt="Bạc Xỉu">
+            <div class="dish-body">
+              <h3>Bạc Xỉu</h3>
+              <p>Nhiều sữa hơn cà phê, thơm béo dịu nhẹ — phiên bản dễ uống cho buổi chiều.</p>
+              <div class="dish-foot">
+                <span class="price">32.000đ</span>
+                <button class="btn-order" type="button">Đặt món</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="dish-card">
+            <img src="../images/ca_phe_vot.jpg" alt="Cà Phê Vợt Nguyên Bản">
+            <div class="dish-body">
+              <h3>Cà Phê Vợt Nguyên Bản</h3>
+              <p>Pha trực tiếp bằng vợt vải trước mặt khách — món signature làm nên tên quán.</p>
+              <div class="dish-foot">
+                <span class="price">35.000đ</span>
+                <button class="btn-order" type="button">Đặt món</button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <section class="menu-section" id="tra-da-xay">
+        <h2>Trà &amp; Đá Xay</h2>
+        <p class="section-note">Trái cây tươi theo mùa, ướp lạnh mỗi sáng.</p>
+        <div class="dish-grid">
+
+          <article class="dish-card">
+            <img src="../images/tra_dao_cam_xa.jpg" alt="Trà Đào Cam Sả">
+            <div class="dish-body">
+              <h3>Trà Đào Cam Sả</h3>
+              <p>Đào ngâm giòn, cam tươi và chút sả the mát — giải khát cả buổi trưa nắng.</p>
+              <div class="dish-foot">
+                <span class="price">39.000đ</span>
+                <button class="btn-order" type="button">Đặt món</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="dish-card">
+            <img src="../images/tra_vai_hoa_hong.jpg" alt="Trà Vải Hoa Hồng">
+            <div class="dish-body">
+              <h3>Trà Vải Hoa Hồng</h3>
+              <p>Vải thiều ngọt thanh quyện hương hoa hồng nhẹ nhàng, thơm mà không gắt.</p>
+              <div class="dish-foot">
+                <span class="price">42.000đ</span>
+                <button class="btn-order" type="button">Đặt món</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="dish-card">
+            <img src="../images/ca_cao_da_xay.jpg" alt="Cacao Đá Xay">
+            <div class="dish-body">
+              <h3>Cacao Đá Xay</h3>
+              <p>Cacao nguyên chất xay đá mịn, phủ kem béo — món yêu thích của khách nhỏ tuổi.</p>
+              <div class="dish-foot">
+                <span class="price">45.000đ</span>
+                <button class="btn-order" type="button">Đặt món</button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <section class="menu-section" id="banh-an-vat">
+        <h2>Bánh &amp; Ăn Vặt</h2>
+        <p class="section-note">Món ăn kèm quen thuộc, làm mới mỗi ngày.</p>
+        <div class="dish-grid">
+
+          <article class="dish-card">
+            <img src="../images/banh_plan.jpg" alt="Bánh Flan">
+            <div class="dish-body">
+              <h3>Bánh Flan</h3>
+              <p>Mềm mịn, caramel đắng nhẹ, ăn kèm cà phê đen thì khỏi chê.</p>
+              <div class="dish-foot">
+                <span class="price">18.000đ</span>
+                <button class="btn-order" type="button">Đặt món</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="dish-card">
+            <img src="../images/banh_da-lon.webp" alt="Bánh Da Lợn">
+            <div class="dish-body">
+              <h3>Bánh Da Lợn</h3>
+              <p>Lá dứa và đậu xanh xếp lớp, dẻo dai vừa phải, ngọt thanh kiểu miền Tây.</p>
+              <div class="dish-foot">
+                <span class="price">15.000đ</span>
+                <button class="btn-order" type="button">Đặt món</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="dish-card">
+            <img src="../images/xoi_bap.webp" alt="Xôi Bắp">
+            <div class="dish-body">
+              <h3>Xôi Bắp</h3>
+              <p>Nếp dẻo, bắp non bùi ngọt, rắc thêm dừa nạo và muối mè.</p>
+              <div class="dish-foot">
+                <span class="price">20.000đ</span>
+                <button class="btn-order" type="button">Đặt món</button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ASIDE -->
+    <aside class="menu-aside" id="khuyen-mai">
+      <div class="aside-block favorites">
+        <h2>Món Được Yêu Thích Trong Tuần</h2>
+        <ul class="favorites-list">
+          <li>
+            <span class="rank">1</span>
+            <span class="fav-name">Cà Phê Vợt Nguyên Bản</span>
+            <span class="fav-price">35.000đ</span>
+          </li>
+          <li>
+            <span class="rank">2</span>
+            <span class="fav-name">Trà Đào Cam Sả</span>
+            <span class="fav-price">39.000đ</span>
+          </li>
+          <li>
+            <span class="rank">3</span>
+            <span class="fav-name">Bạc Xỉu</span>
+            <span class="fav-price">32.000đ</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="aside-block promo">
+        <p class="promo-eyebrow">Vé ưu đãi</p>
+        <h2>Khuyến Mãi Đặc Biệt</h2>
+        <p>Mua 2 ly cà phê vợt bất kỳ, tặng ngay 1 bánh flan. Áp dụng mỗi ngày từ 6:00 – 9:00.</p>
+        <p class="promo-code">Nhập mã: <strong>COZY-SANG</strong></p>
+      </div>
+    </aside>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" id="lien-he">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <h3>Giờ mở cửa</h3>
+        <p>Thứ 2 – Chủ nhật: 6:00 – 22:00</p>
+        <p>Riêng sáng thứ 7: mở từ 5:30</p>
+      </div>
+      <div class="footer-col">
+        <h3>Liên hệ</h3>
+        <p>134/7 Đường Phan Đình Phùng, Quận Phú Nhuận, TP. Hồ Chí Minh</p>
+        <p>Hotline: 0908 123 456</p>
+      </div>
+      <div class="footer-col">
+        <h3>Kết nối với chúng tôi</h3>
+        <ul class="social-links">
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Zalo</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="copyright">© 2026 Hoshi. Đã giữ mọi bản quyền.</p>
+  </footer>
+
+</body>
+</html>

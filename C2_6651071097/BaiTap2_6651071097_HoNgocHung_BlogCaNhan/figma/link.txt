@@ -1,0 +1,7 @@
+Link thiết kế Figma (chế độ xem - view only):
+https://www.figma.com/file/THAY-BANG-LINK-FIGMA-CUA-BAN
+
+Ghi chú: Thay đường link trên bằng link Figma thật của bạn trước khi nộp bài.
+Wireframe & mockup nên thể hiện đủ các khối: Header (sticky), Hero, Giới thiệu,
+Kỹ năng, Dự án, Hành trình, Blog + Aside, Footer — tương ứng với bố cục trong
+file html/index.html đã dựng.

@@ -1,0 +1,546 @@
+/* =========================================================
+   THE COZY BEAN — style.css
+   Bảng màu: mực đậm #2B1810 · gạch #A63D2F · ngọc bích #3D5C46
+             mù tạt #C89B3C · giấy da #EDE3D0 · kem #F7F1E3
+   Font: "Fraunces" (tiêu đề) + "Be Vietnam Pro" (nội dung)
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap');
+
+/* Universal Selector: reset hộp và loại bỏ margin/padding mặc định của trình duyệt */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Tag/Element Selector: thiết lập nền và font chữ gốc cho toàn trang */
+body {
+  background: #EDE3D0;
+  color: #2B1810;
+  font-family: "Be Vietnam Pro", "Segoe UI", sans-serif;
+  line-height: 1.6;
+}
+
+/* Tag Selector: định dạng chung cho mọi ảnh trong trang */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Group Selector (,): áp dụng cùng font tiêu đề cho mọi cấp heading */
+h1, h2, h3 {
+  font-family: "Fraunces", Georgia, serif;
+  color: #2B1810;
+  line-height: 1.2;
+}
+
+/* ---------------------------------------------------------
+   HEADER
+   --------------------------------------------------------- */
+
+.site-header {
+  background: #2B1810;
+  color: #F7F1E3;
+}
+
+/* Khối trên cùng của header: logo góc trái, tên quán căn giữa, giỏ hàng góc phải */
+.header-top {
+  position: relative;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 20px 32px 24px;
+  text-align: center;
+}
+
+/* Descendant Selector: chỉ ảnh logo nằm bên trong .header-top mới nhận kích thước này */
+.header-top .logo {
+  position: absolute;
+  top: 18px;        /* cách mép trên 18px để không bị dính sát viền */
+  left: 32px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%; /* Border & Background: bo tròn logo thành hình tròn */
+  border: 2px solid #C89B3C;
+}
+
+.brand-text {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 0 84px; /* chừa chỗ cho logo/giỏ hàng ở hai bên trên màn hình rộng */
+  margin-top: 34px; /* đẩy cụm tên quán & slogan xuống, cân đối với logo/giỏ hàng hai bên */
+}
+
+.brand-text h1 {
+  font-size: 3.1rem;
+  color: #F7F1E3;
+  letter-spacing: 0.01em;
+}
+
+/* Adjacent Sibling Selector (+): câu slogan nằm ngay sau tiêu đề quán trong .brand-text */
+.brand-text h1 + p {
+  color: #C89B3C;
+  font-size: 1rem;
+  font-style: italic;
+  margin-top: 8px;
+}
+
+/* Nút giỏ hàng ở góc trên bên phải header */
+.cart-btn {
+  position: absolute;
+  top: 18px;        /* cách mép trên 18px để không bị dính sát viền */
+  right: 32px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 2px solid #C89B3C;
+  background: transparent;
+  color: #F7F1E3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+/* Pseudo-class Selector: đổi màu nền nút giỏ hàng khi hover */
+.cart-btn:hover {
+  background: #C89B3C;
+  color: #2B1810;
+}
+
+.cart-count {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #A63D2F;
+  color: #F7F1E3;
+  font-size: 0.65rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Thanh điều hướng nằm dưới tên quán, căn giữa */
+.main-nav {
+  display: flex;
+  justify-content: center;
+  padding: 0 32px 22px;
+}
+
+/* Child Selector (>): chỉ nhắm tới <ul> con trực tiếp của .main-nav, không ảnh hưởng ul lồng sâu hơn */
+.main-nav > ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 28px;
+  list-style: none;
+}
+
+.main-nav a {
+  color: #F7F1E3;
+  text-decoration: none;
+  font-weight: 500;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.25s ease, color 0.25s ease;
+}
+
+/* Pseudo-class Selector: đổi màu & gạch chân khi rê chuột qua mục điều hướng */
+.main-nav a:hover {
+  color: #C89B3C;
+  border-bottom-color: #C89B3C;
+}
+
+/* Banner / hero bên dưới header */
+.banner {
+  min-height: 300px;
+  display: flex;
+  align-items: flex-end;
+  padding: 40px 32px;
+
+  /* Background properties nâng cao: kích thước & vị trí ảnh nền banner */
+  background-image: url("../images/banner.jpg");
+  background-size: cover;
+  background-position: center 35%;
+  background-repeat: no-repeat;
+}
+
+.banner-text {
+  max-width: 640px;
+}
+
+.eyebrow {
+  color: #C89B3C;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.banner-quote {
+  font-family: "Fraunces", serif;
+  font-style: italic;
+  font-size: 1.5rem;
+  color: #F7F1E3;
+}
+
+/* ---------------------------------------------------------
+   LAYOUT: main + aside cạnh nhau
+   --------------------------------------------------------- */
+
+.page-body {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 48px 32px;
+  display: grid;
+  grid-template-columns: 2.4fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+/* ---------------------------------------------------------
+   MENU SECTIONS
+   --------------------------------------------------------- */
+
+.menu-section {
+  margin-bottom: 56px;
+}
+
+.menu-section h2 {
+  display: inline-block;
+  font-size: 1.7rem;
+  padding: 4px 14px 8px 0;
+  margin-bottom: 4px;
+
+  /* Background properties nâng cao: background-origin & background-clip
+     tạo dải gạch chân mù tạt chỉ trải trong vùng nội dung chữ */
+  background-image: linear-gradient(#C89B3C, #C89B3C);
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: 100% 6px;
+  background-origin: content-box;
+  background-clip: content-box;
+}
+
+.section-note {
+  color: #5b4636;
+  font-size: 0.95rem;
+  margin-bottom: 24px;
+  max-width: 60ch;
+}
+
+.dish-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+/* Class Selector: khung thẻ món ăn */
+.dish-card {
+  background: #F7F1E3;
+  border-radius: 14px;          /* Border & Background: bo góc card */
+  box-shadow: 0 10px 24px rgba(43, 24, 16, 0.18); /* Border & Background: đổ bóng nổi cho card */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Pseudo-class Selector: card nhô nhẹ lên khi hover, tăng độ sâu bóng đổ */
+.dish-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 30px rgba(43, 24, 16, 0.28);
+}
+
+.dish-card img {
+  height: 190px;
+  object-fit: cover;
+  border-radius: 14px 14px 0 0; /* Border & Background: bo góc trên của ảnh món ăn */
+}
+
+.dish-body {
+  padding: 18px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.dish-body h3 {
+  font-size: 1.15rem;
+  margin-bottom: 8px;
+}
+
+.dish-body p {
+  color: #5b4636;
+  font-size: 0.92rem;
+  flex-grow: 1;
+}
+
+.dish-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+
+/* ID Selector: không có phần tử id trong khu vực món ăn — minh hoạ id dùng cho khối đầu trang chủ */
+#trang-chu {
+  scroll-margin-top: 12px;
+}
+
+.price {
+  font-family: "Fraunces", serif;
+  font-weight: 600;
+  color: #A63D2F;
+  font-size: 1.05rem;
+}
+
+.btn-order {
+  background: #2B1810;
+  color: #F7F1E3;
+  border: none;
+  border-radius: 999px;
+  padding: 8px 18px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.25s ease;
+}
+
+/* Pseudo-class Selector: đổi màu nút đặt món khi hover */
+.btn-order:hover {
+  background: #A63D2F;
+}
+
+/* Pseudo-class Selector: món đầu tiên trong mỗi lưới được nhấn viền nhẹ để dẫn mắt người xem */
+.dish-grid .dish-card:first-child {
+  outline: 2px solid #C89B3C;
+  outline-offset: -2px;
+}
+
+/* ---------------------------------------------------------
+   ASIDE
+   --------------------------------------------------------- */
+
+.aside-block {
+  background: #F7F1E3;
+  border-radius: 14px;
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 8px 18px rgba(43, 24, 16, 0.12);
+}
+
+.aside-block h2 {
+  font-size: 1.25rem;
+  background: none; /* huỷ dải gạch chân dùng chung, khối aside không cần hiệu ứng đó */
+  margin-bottom: 16px;
+}
+
+.favorites-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.favorites-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.rank {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #2B1810;
+  color: #C89B3C;
+  font-size: 0.8rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.fav-name {
+  flex-grow: 1;
+  font-size: 0.92rem;
+}
+
+.fav-price {
+  color: #A63D2F;
+  font-weight: 600;
+  font-size: 0.88rem;
+}
+
+/* Khối khuyến mãi — khung viền trang trí kiểu vé xé */
+.promo {
+  background: #2B1810;
+  color: #F7F1E3;
+
+  /* Border & Background nâng cao: border-image tạo khung viền dạng vé xé (răng cưa) */
+  border-style: solid;
+  border-width: 14px;
+  border-image-source: url("../images/ticket-border.png");
+  border-image-slice: 20 fill;
+  border-image-repeat: round;
+  border-image-width: 14px;
+  border-radius: 4px;
+}
+
+.promo-eyebrow {
+  color: #C89B3C;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.promo h2 {
+  color: #F7F1E3;
+  margin-bottom: 12px;
+}
+
+.promo p {
+  font-size: 0.92rem;
+  margin-bottom: 8px;
+}
+
+.promo-code strong {
+  color: #C89B3C;
+}
+
+/* Pseudo-element Selector: dấu ngoặc kép trang trí trước tiêu đề khối khuyến mãi */
+.promo h2::before {
+  content: "— ";
+  color: #C89B3C;
+}
+
+/* ---------------------------------------------------------
+   FOOTER
+   --------------------------------------------------------- */
+
+.site-footer {
+  color: #F7F1E3;
+  padding: 48px 32px 24px;
+
+  /* Background properties nâng cao: nhiều lớp nền (multiple background images)
+     kết hợp hoạ tiết trang trí lặp lại + gradient màu nền */
+  background-image:
+    url("../images/bg-pattern.png"),
+    linear-gradient(160deg, #2B1810, #1c110b);
+  background-repeat: repeat, no-repeat;
+  background-size: 80px 80px, cover;
+}
+
+.footer-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  padding-bottom: 32px;
+}
+
+.footer-col h3 {
+  font-family: "Fraunces", serif;
+  color: #C89B3C;
+  font-size: 1.05rem;
+  margin-bottom: 10px;
+}
+
+.footer-col p {
+  font-size: 0.9rem;
+  color: #e6dcc8;
+  margin-bottom: 4px;
+}
+
+.social-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.social-links a {
+  color: #e6dcc8;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+}
+
+.social-links a:hover {
+  color: #C89B3C;
+}
+
+.copyright {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding-top: 20px;
+  border-top: 1px solid rgba(247, 241, 227, 0.15);
+  font-size: 0.8rem;
+  color: #b9ab90;
+  text-align: center;
+}
+
+/* ---------------------------------------------------------
+   RESPONSIVE
+   --------------------------------------------------------- */
+
+@media (max-width: 900px) {
+  .page-body {
+    grid-template-columns: 1fr;
+  }
+
+  .dish-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .brand-text {
+    padding: 0 60px;
+  }
+
+  .brand-text h1 {
+    font-size: 2.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner-quote {
+    font-size: 1.15rem;
+  }
+
+  .header-top .logo {
+    width: 44px;
+    height: 44px;
+    top: 16px;
+    left: 16px;
+  }
+
+  .cart-btn {
+    width: 38px;
+    height: 38px;
+    top: 16px;
+    right: 16px;
+  }
+
+  .brand-text {
+    padding: 46px 4px 0;
+    margin-top: 0; /* trên mobile padding-top đã đủ chừa chỗ cho logo/giỏ hàng, không cộng thêm margin */
+  }
+
+  .brand-text h1 {
+    font-size: 1.7rem;
+  }
+
+  .main-nav > ul {
+    gap: 16px 20px;
+  }
+}
